@@ -1838,6 +1838,7 @@ class Markdown(object):
                 return self._wrap_div(self._wrap_pre(self._wrap_code(source)))
 
         formatter_opts.setdefault("cssclass", "codehilite")
+        formatter_opts.setdefault("linenos", "table")
         formatter = HtmlCodeFormatter(**formatter_opts)
         return pygments.highlight(codeblock, lexer, formatter)
 
